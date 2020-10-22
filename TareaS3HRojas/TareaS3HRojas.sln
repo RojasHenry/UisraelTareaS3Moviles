@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TareaS3HRojas.Android", "TareaS3HRojas.Android\TareaS3HRojas.Android.csproj", "{62CB4E78-02EB-4857-BFB3-F553AB257054}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TareaS3HRojas", "TareaS3HRojas\TareaS3HRojas.csproj", "{D3939D56-EA05-4459-96D0-4124FDDD98C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62CB4E78-02EB-4857-BFB3-F553AB257054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62CB4E78-02EB-4857-BFB3-F553AB257054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62CB4E78-02EB-4857-BFB3-F553AB257054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62CB4E78-02EB-4857-BFB3-F553AB257054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3939D56-EA05-4459-96D0-4124FDDD98C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3939D56-EA05-4459-96D0-4124FDDD98C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3939D56-EA05-4459-96D0-4124FDDD98C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3939D56-EA05-4459-96D0-4124FDDD98C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

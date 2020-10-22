@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{62CB4E78-02EB-4857-BFB3-F553AB257054}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TareaS3HRojas/MainPage.xaml">
+    <Files>
+      <File FileName="TareaS3HRojas/MainPage.xaml.cs" Line="11" Column="1" />
+      <File FileName="TareaS3HRojas/MainPage.xaml" Line="11" Column="26" />
+      <File FileName="TareaS3HRojas/LoginPage.xaml" />
+      <File FileName="TareaS3HRojas/LoginPage.xaml.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TareaS3HRojas" expanded="True">
+            <Node name="TareaS3HRojas" expanded="True">
+              <Node name="App.xaml" expanded="True" />
+              <Node name="LoginPage.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TareaS3HRojas.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.6NUDU18804000280" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

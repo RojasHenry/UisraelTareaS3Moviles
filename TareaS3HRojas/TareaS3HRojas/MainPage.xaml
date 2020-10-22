@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TareaS2HRojas.Converters" x:Class="TareaS3HRojas.MainPage">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:IEstadoConverter x:Key="iestadoConverter"></local:IEstadoConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="12" CornerRadius="0">
+            <StackLayout>
+                <Label x:Name="txtuseractual" Text="Bienvenido:" TextColor="White" FontSize="14"/>
+            </StackLayout>
+        </Frame>
+
+        <Grid>
+             <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                 <RowDefinition Height="70" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label Text="Primer Parcial" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                <Label Text="Nota de Seguimiento 1" FontSize="Small" />
+                <Entry x:Name="entryNotaS1" Placeholder="" Keyboard="Numeric" Text=""  />
+                <Label Text="Exámen 1" FontSize="Small"/>
+                <Entry x:Name="entryExamenS1" Placeholder="" Keyboard="Numeric" Text=""  />
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label Text="Segundo Parcial" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                <Label Text="Nota de Seguimiento 2" FontSize="Small"/>
+                <Entry x:Name="entryNotaS2" Placeholder="" Keyboard="Numeric" Text=""/>
+                <Label Text="Exámen 2" FontSize="Small"/>
+                <Entry x:Name="entryExamenS2" Placeholder="" Keyboard="Numeric" Text=""/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.Column="0" Margin="10">
+                <Button x:Name="btnCalcular" Text="Calcular" Clicked="btnCalcular_Clicked" BackgroundColor="#2196F3" TextColor="White"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.Column="1" Margin="10">
+                <Button x:Name="btnlimpiar" Text="Limpiar campos" Clicked="btnlimpiar_Clicked" BackgroundColor="#2196F3" TextColor="White" IsEnabled="False"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2">
+                <ListView x:Name="notasList" ItemsSource="{Binding SeguimientoList}" Margin="10">
+                    <ListView.Header>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="80" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0" Text="NS1" HorizontalTextAlignment="Center" ></Label>
+                            <Label Grid.Row="0" Grid.Column="1" Text="E1" HorizontalTextAlignment="Center"></Label>
+                            <Label Grid.Row="0" Grid.Column="2" Text="NP1" HorizontalTextAlignment="Center"></Label>
+
+                            <Label Grid.Row="0" Grid.Column="3" Text="NS2" HorizontalTextAlignment="Center"></Label>
+                            <Label Grid.Row="0" Grid.Column="4" Text="E2" HorizontalTextAlignment="Center"></Label>
+                            <Label Grid.Row="0" Grid.Column="5" Text="NP2"></Label>
+
+                            <Label Grid.Row="0" Grid.Column="6" Text="NF" HorizontalTextAlignment="Center"></Label>
+                            <Label Grid.Row="0" Grid.Column="7" Text="OBS" HorizontalTextAlignment="Center"></Label>
+                            <BoxView Grid.Row="1" Grid.ColumnSpan="8" Color="Black"/>
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="* " />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="80" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding nota1}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding examen1}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding notaParcial1}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+
+                                    <Label Grid.Row="0" Grid.Column="3" Text="{Binding nota2}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                    <Label Grid.Row="0" Grid.Column="4" Text="{Binding examen2}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                    <Label Grid.Row="0" Grid.Column="5" Text="{Binding notaParcial1}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+
+                                    <Label Grid.Row="0" Grid.Column="6" Text="{Binding notaFinal}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                    <Label Grid.Row="0" Grid.Column="7" Text="{Binding estado}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White"
+                                           BackgroundColor="{ Binding estado, Converter={StaticResource iestadoConverter}}"></Label>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>
